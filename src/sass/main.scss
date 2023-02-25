@@ -698,31 +698,11 @@ div.site-footer {
   
 }
 
-@media (max-width: 497px) {
+@media (max-width: 539px) {
   header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-     .dropdown {
-      position: relative;
-      /* display: flex; */
-      color: black;
-      background-color: transparent;
-      display: flex;
-      justify-content: center;
-  }
-  }
-
-  #products {
-    display: flex;
-    flex-direction: row;
-    
-  }
-  
-}
-@media (min-width: 300px) {
-  header{
-    display: block;
      .dropdown {
       position: relative;
       /* display: flex; */
@@ -736,10 +716,30 @@ div.site-footer {
   #products {
     display: flex;
     flex-direction: column;
-
+    
   }
   
 }
+// @media (max-width: 300px) {
+//   header{
+//     display: block;
+//      .dropdown {
+//       position: relative;
+//       /* display: flex; */
+//       color: black;
+//       background-color: transparent;
+//       display: flex;
+//       justify-content: center;
+//   }
+//   }
+
+//   #products {
+//     display: flex;
+//     flex-direction: column;
+
+//   }
+  
+// }
 
 
 

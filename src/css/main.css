@@ -591,27 +591,10 @@ div.site-footer {
     font-weight: 600;
   }
 }
-@media (max-width: 497px) {
+@media (max-width: 539px) {
   header {
     display: flex;
-    flex-direction: row;
-  }
-  header .dropdown {
-    position: relative;
-    /* display: flex; */
-    color: black;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-  }
-  #products {
-    display: flex;
-    flex-direction: row;
-  }
-}
-@media (min-width: 300px) {
-  header {
-    display: block;
+    flex-direction: column;
   }
   header .dropdown {
     position: relative;
