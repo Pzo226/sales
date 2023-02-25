@@ -591,6 +591,41 @@ div.site-footer {
     font-weight: 600;
   }
 }
+@media (max-width: 497px) {
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+  header .dropdown {
+    position: relative;
+    /* display: flex; */
+    color: black;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+  #products {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 300px) {
+  header {
+    display: block;
+  }
+  header .dropdown {
+    position: relative;
+    /* display: flex; */
+    color: black;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+  #products {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .spotlight {
   color: #333;
   font-family: Helvetica;

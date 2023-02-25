@@ -694,6 +694,53 @@ div.site-footer {
 
 }
 
+@media screen {
+  
+}
+
+@media (max-width: 497px) {
+  header{
+    display: flex;
+    flex-direction: row;
+
+     .dropdown {
+      position: relative;
+      /* display: flex; */
+      color: black;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+  }
+  }
+
+  #products {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+}
+@media (min-width: 300px) {
+  header{
+    display: block;
+     .dropdown {
+      position: relative;
+      /* display: flex; */
+      color: black;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+  }
+  }
+
+  #products {
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+}
+
 
 
 
