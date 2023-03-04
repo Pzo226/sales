@@ -33,22 +33,22 @@ function myFunction() {
   const products = [
     {
       id: 1,
-      name: 'Locs',
+      name: 'Soft Locs',
       price: 130,
-      description: ['Comes with hair 2pck = 6bundles', 'Choice of color', 'additional cost if need more hair then 1pck 3bundles estimate'],
+      description: ['Length', 'Length  min 18in - 24in - 30in - max 36in', 'Choice of color Pink, Black, Brown, Burrgondy,'],
       image: 'product1.jpg'
     },
     {
       id: 2,
-      name: 'Product 2',
-      price: 65,
-      description: ['Press on nails', 'Custom Press Ons', 'Apply them for you'],
+      name: 'Butterfly Locs',
+      price: 200,
+      description: ['min 12in - 18in - max 36in ', 'Custom Press Ons', 'Apply them for you'],
       image: 'product2.jpg'
     },
     {
       id: 3,
-      name: 'Product 3',
-      price: 30,
+      name: 'Lashes/per pair',
+      price: 5.55,
       description: ['Monkey', 'Panda', 'Kangaroo'],
       image: 'product3.jpg'
     }
@@ -66,46 +66,87 @@ function myFunction() {
       const productImg = document.createElement('img');
       const productName = document.createElement('h2');
       const productPrice = document.createElement('p');
-      const productDescription = document.createElement('ul');
+      const productDescription = document.createElement('main');
       const addToCartBtn = document.createElement('button');
-      // const upgradeBtn = document.createElement('button');
-
+  
       productImg.src = `images/${product.image}`;
       productName.innerText = product.name;
       productPrice.innerText = `$${product.price}`;
-      product.description.forEach(animal => {
-        const animalName = document.createElement('li');
-        animalName.innerText = animal;
-        productDescription.appendChild(animalName);
+  
+      product.description.forEach((descriptionItem, index) => {
+        const descriptionItemElem = document.createElement('div');
+        const button = document.createElement('button');
+        button.innerText = 'Learn More';
+        descriptionItemElem.innerText = descriptionItem;
+  
+        // Add buttons for lengths and change their background color on hover
+        // if (product.id === 1 && index === 0) {
+        //   const subButtonValues = ['12in', '14in', '16in', '18in'];
+        //   for (let i = 0; i < 4; i++) {
+        //     const subButton = document.createElement('div');
+        //     subButton.innerText = `${subButtonValues[i]}`;
+        //     subButton.addEventListener('mouseover', function() {
+        //       this.style.backgroundColor = getRandomDarkColor();
+        //     });
+        //     subButton.addEventListener('mouseout', function() {
+        //       this.style.backgroundColor = '#333'; // set default background color on mouseout
+        //     });
+        //     descriptionItemElem.appendChild(subButton);
+        //   }
+        // }
+        
+        // Add buttons for colors in description and change their background color on hover
+        if (product.id === 1 && index === 2) {
+          const subButtonValues = ['Pink', 'Black', 'Brown', 'Burgundy'];
+          for (let i = 0; i < 4; i++) {
+            const subButton = document.createElement('div');
+            subButton.classList.add('num');
+            subButton.innerText = `${subButtonValues[i]}`;
+            subButton.addEventListener('mouseover', function() {
+              this.style.backgroundColor = getRandomDarkColor();
+            });
+            subButton.addEventListener('mouseout', function() {
+              this.style.backgroundColor = '#333'; // set default background color on mouseout
+            });
+            descriptionItemElem.appendChild(subButton);
+          }
+        }
+  
+        descriptionItemElem.appendChild(button);
+        productDescription.appendChild(descriptionItemElem);
       });
+  
       addToCartBtn.innerText = 'Add to cart';
       addToCartBtn.addEventListener('click', () => {
         cart.push(product);
         updateCart();
       });
-
-      // upgradeBtn.innerText = '$10 upgrade';
-      // upgradeBtn.addEventListener('click', () => {
-      //   product.price += 10;
-      //   productPrice.innerText = `$${product.price}`;
-      //   updateCart();
-      // });
-
+  
       productDiv.appendChild(productImg);
       productDiv.appendChild(productName);
       productDiv.appendChild(productPrice);
       productDiv.appendChild(productDescription);
       productDiv.appendChild(addToCartBtn);
-      // productDiv.appendChild(upgradeBtn);
-
+  
       productsDiv.appendChild(productDiv);
     });
   }
+  
+  function getRandomDarkColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 3; i++) {
+      var index = Math.floor(Math.random() * 15);
+      color += letters[index];
+    }
+    return color;
+  }
+  
 
   function updateCart() {
     cartItems.innerText = `${cart.length} item(s)`;
     const total = cart.reduce((acc, product) => acc + product.price, 0);
-    cartTotal.innerText = `$${total}`;
+    cartTotal.innerText = `$${total}` ;
   }
 
   renderProducts();
