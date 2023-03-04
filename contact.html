@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/contact.css">
+    <script src="https://kit.fontawesome.com/8095dfc684.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Se7en's Contact Page</title>
+</head>
+
+<body>
+
+    <div class="cards">
+
+        <div class="contact">Contact Me Click Here</div>
+        <div class="contact-form">
+            <a href="#" class="close"><i class="fa fa-times"></i></a>
+            <form action="https://formspree.io/f/xrgvkydb" method="post">
+                <div class="control">
+                  <input type="text" id="name" name="name"  />
+                  <label for="name">Your Name</label>
+                </div>
+                <div class="control">
+                  <input type="text" id="email" name="email"  />
+                  <label for="email">Email Address</label>
+                </div>
+                <div class="control">
+                  <textarea id="message" name="message" ></textarea>
+                  <label for="message">Message</label>
+                </div>
+                <div class="control">
+                  <input type="tel" id="phone" name="phone"  pattern="[0-9]{1,12}" maxlength="12" />
+                  <label for="phone">Phone</label>
+                </div>
+                <div id="chosen"></div>
+                <div class="control submit">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+        </div>
+
+        <div class="card active" id="overview">
+            <a class="card-toggle"><i class="fa fa-arrow-circle-left"></i></a>
+            <div class="card-content">
+                <div class="row">
+                    <div class="left col">
+                        <h2 class="animate__animated animate__headShake">Check my avalability <strong>Contact
+                                Me</strong></h2>
+
+                        <p>For any further queston feel free to add a maessage to the for above <br /><em>For Booking
+                                leave your Name, Date, Time, and details on what you want done.</em></p>
+
+                    </div>
+                    <div class="right col">
+                        <a href="index.html">Home</a>
+                        <!-- <button onclick="toggleCalendar()">Show Calendar</button>
+                        <div id="calendar" style="display: none;">
+                            <div id="month"></div>
+                            <table id="dates">
+                                <thead>
+                                    <tr>
+                                        <th>Sun</th>
+                                        <th>Mon</th>
+                                        <th>Tue</th>
+                                        <th>Wed</th>
+                                        <th>Thu</th>
+                                        <th>Fri</th>
+                                        <th>Sat</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div>
+                                <label for="new-date">Add date:</label>
+                                <input type="date" id="new-date">
+                                <button onclick="addDate()"></button>
+                            </div>
+                            <div>
+                                <label for="remove-date">Remove date:</label>
+                                <select id="remove-date"></select>
+                                <button onclick="removeDate()">Remove</button>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tags">
+            <a href="#"><span>Facebook</span></a>
+            <a href="#"><span>Twitter</span></a>
+            <a href="#"><span>Google+</span></a>
+            <a href="#"><span>Github</span></a>
+            <a href="#"><span>Dribbble</span></a>
+            <a href="#"><span>CodePen</span></a>
+        </div>
+
+
+
+    </div>
+
+    <script src="./src/js/contact.js"></script>
+</body>
+
+</html>

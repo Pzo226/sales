@@ -14,7 +14,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1.3fr;
-  grid-template-rows: 1fr 4fr 1fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr  1fr 2fr 2fr;
   height: 100vh;
   margin: 2em;
   gap: 1.1em;
@@ -153,7 +153,7 @@ header img {
 // grid content 
 
 div.wordsOr {
-  grid-area: 3 / 1 / 4 / 2;
+  grid-area: 2 / 1 / 3 / 2;
   background-color: beige;
   font-family: $font;
   font-size: 38px;
@@ -172,7 +172,7 @@ div.wordsOr {
 }
 
 div.wordsWeb {
-  grid-area: 3 / 2 / 4 / 3;
+  grid-area: 2 / 2 / 3 / 3;
   background-color: bisque;
   font-family: $font;
   font-size: 38px;
@@ -191,7 +191,7 @@ div.wordsWeb {
 }
 
 div.wordsDevelopment {
-  grid-area: 3 / 3 / 4 / 4;
+  grid-area: 2 / 3 / 3 / 4;
   background-color: cadetblue;
   font-family: $font;
   font-size: 38px;
@@ -374,7 +374,7 @@ article {
 }
 
 div.candy {
-  grid-area: 2 / 1 / 3 / 4;
+  grid-area: 3 / 1 / 4 / 4;
   
   background-color: #222;
   text-align: center;
@@ -384,20 +384,266 @@ div.candy {
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
-    width: 100%;
+    width: 100%; 
+    height: auto;
+
+
+.content {
+  position: relative; 
+    /* left: 50%; */
+    transform: translate(0%, 50%);
+    /* height: 160px; */
+    font-family: "Lato", sans-serif;
+    font-size: 35px;
+    /* line-height: 40px; */
+    color: #4393ba;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  background-color: transparent;
+  
+  
+  &__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 40px;
+
+    &:before {
+      content: '[';
+      left: 0;
+    }
+
+    &:after {
+      content: ']';
+      position: absolute;
+      right: 0;
+    }
+
+    &:after, &:before {
+      position: absolute;
+      top: 0;
+      
+      color: #60a5e2;
+      font-size: 42px;
+      line-height: 40px;
+      
+      -webkit-animation-name: opacity;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      animation-name: opacity;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    &__text {
+      display: inline;
+      float: left;
+      margin: 0;
+    }
+
+    &__list {
+      margin-top: 0;
+      padding-left: 110px;
+      text-align: left;
+      list-style: none;
+      
+      -webkit-animation-name: change;
+      -webkit-animation-duration: 10s;
+      -webkit-animation-iteration-count: infinite;
+      animation-name: change;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+
+      &__item {
+        line-height:40px;
+        margin:0;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-webkit-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@-o-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-o-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@-moz-keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@-moz-keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@keyframes opacity {
+  0%, 100% {opacity:0;}
+  50% {opacity:1;}
+}
+
+@keyframes change {
+  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+  33.32%,45.98% {transform:translate3d(0,-50%,0);}
+  49.98%,62.64% {transform:translate3d(0,-75%,0);}
+  66.64%,79.3% {transform:translate3d(0,-50%,0);}
+  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+// 6 is the number of animation.
+// Here, there are 4 lines :
+
+// 1 to 2
+// 2 to 3
+// 3 to 4
+// 4 to 3
+// 3 to 2
+// 2 to 1
+
+// 6x + 6y = 100 (100% duration)
+
+// HERE : 
+// y = 4 -> Animation between two lines
+// x = 12.66 -> Time spent on a line
+
+// You can define a value and calculate the other if you want change speed or the number of lines
+
+    .bio {
+      width: 50%;
+      background-color: lightpink;
+      font-size: x-large;
+    }
+
+    .product-container {
+      display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 20px;
+		}
+		.product-box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 300px;
+			height: auto;
+			margin: 20px;
+			padding: 20px;
+			background-color: #FEDFE1; /* light pink */
+			box-shadow: -10px 0px 15px -7px rgba(0,0,0,0.75); /* shadow to the left */
+      overflow: visible;
+      img {
+        border: 1px solid #c89494;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+        background-color: #facacd;        
+      }
+
+      h2 {
+        color: #bb777c;
+      }
+      
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid black;
+      }
+      th {
+        background-color: #eee;
+        width: auto;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    
+      img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+
+
+  
+      }
+      ul{
+        font-size: 1.125rem;
+        margin-top: 2em;
+        margin-left: 1em;
+        line-height: 2rem;
+      }
+      
+		}
+		.product-box h3 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		.product-box p {
+			font-size: 16px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
 
     #products {
       display: flex;
       gap: 1rem;
+      
 
       .product{
-        background-color: #007bb6;
+        background-color: plum;
         margin: 1rem 0px; /*note that left and right margins are zero to allow for proper margins using flex-basis and justify-content*/
         padding: 0.5em 1em;
         box-sizing: border-box; /*isama sa pagformat 'yung pinakadulong edge ng div (border) content-box lang ito by default*/
         text-align: justify-center;
         line-height: 1.2;
         flex-basis: 30%; /*flex-box way of specifying a particular size (width)*/
+
+       
+
+        ul{
+          background-color: lightcoral;
+
+          li{
+            display: flex;
+            justify-content: space-between;
+
+            button{
+              color: #ba1212;
+              
+            }
+          }
+        }
       
 
         p{
@@ -410,7 +656,7 @@ div.candy {
             max-width: 700px;
             text-align: center;
             background: rgba(255, 253, 160, 1);
-            background: -webkit-linear-gradient( left, #00ffff 0%, #97fba0 25%, #97b1fb 50%, #00ffff 100%) repeat;
+            background: -webkit-linear-gradient( left, #00ffff 0%, #749acb 25%, #97b1fb 50%, #00ffff 100%) repeat;
             -webkit-background-clip: text;
             -ms-background-clip: text;
             -moz-background-clip: text;
@@ -438,14 +684,7 @@ div.candy {
       }
     }
 
-    h2 {
-      color: white;
-    }
-
-p {
-  
-    background-color: white;
-}
+   
 
 section.tom {
   grid-area: 5 / 1 / 6 / 4;
@@ -783,3 +1022,4 @@ div.site-footer {
     clip-path: ellipse(100px 100px at 0% 50%);
   }
 }
+
