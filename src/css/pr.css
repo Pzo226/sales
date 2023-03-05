@@ -521,8 +521,10 @@ div.candy .product-box {
   height: auto;
   margin: 20px;
   padding: 20px;
-  background-color: #FEDFE1; /* light pink */
-  box-shadow: -10px 0px 15px -7px rgba(0, 0, 0, 0.75); /* shadow to the left */
+  background-color: #FEDFE1;
+  /* light pink */
+  box-shadow: -10px 0px 15px -7px rgba(0, 0, 0, 0.75);
+  /* shadow to the left */
   overflow: visible;
 }
 div.candy .product-box img {
@@ -539,7 +541,8 @@ div.candy .product-box table {
   border-collapse: collapse;
   width: 100%;
 }
-div.candy .product-box th, div.candy .product-box td {
+div.candy .product-box th,
+div.candy .product-box td {
   padding: 8px;
   text-align: left;
   border: 1px solid black;
@@ -575,12 +578,15 @@ div.candy #products {
 }
 div.candy #products .product {
   background-color: plum;
-  margin: 1rem 0px; /*note that left and right margins are zero to allow for proper margins using flex-basis and justify-content*/
+  margin: 1rem 0px;
+  /*note that left and right margins are zero to allow for proper margins using flex-basis and justify-content*/
   padding: 0.5em 1em;
-  box-sizing: border-box; /*isama sa pagformat 'yung pinakadulong edge ng div (border) content-box lang ito by default*/
+  box-sizing: border-box;
+  /*isama sa pagformat 'yung pinakadulong edge ng div (border) content-box lang ito by default*/
   text-align: justify-center;
   line-height: 1.2;
-  flex-basis: 30%; /*flex-box way of specifying a particular size (width)*/
+  flex-basis: 30%;
+  /*flex-box way of specifying a particular size (width)*/
 }
 div.candy #products .product ul {
   background-color: lightcoral;
@@ -827,6 +833,29 @@ div.site-footer {
     display: block;
     margin-right: 0;
     font-weight: 600;
+  }
+}
+@media (max-width: 450px) {
+  .grid-container .candy .bio {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+    font-size: small;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  body .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .product-container {
+    width: 300px;
   }
 }
 @media (min-width: 3617px) {
