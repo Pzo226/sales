@@ -503,7 +503,6 @@ div.candy .content__container__list__item {
   }
 }
 div.candy .bio {
-  width: 50%;
   background-color: lightpink;
   font-size: x-large;
 }
@@ -840,7 +839,8 @@ div.site-footer {
     display: block;
     margin-right: 0;
     font-weight: 600;
-    font-size: small;
+    font-size: smaller;
+    width: 50;
   }
 }
 @media screen and (max-width: 500px) {
