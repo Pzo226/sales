@@ -670,7 +670,7 @@ div.candy {
     // You can define a value and calculate the other if you want change speed or the number of lines
 
     .bio {
-      width: 50%;
+
       background-color: lightpink;
       font-size: x-large;
     }
@@ -1076,7 +1076,8 @@ div.candy {
       display: block;
       margin-right: 0;
       font-weight: 600;
-      font-size: small;
+      font-size: smaller;
+      width: 50;
      }
     }
   }
